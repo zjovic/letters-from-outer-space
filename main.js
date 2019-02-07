@@ -28,6 +28,10 @@ const letters = [
 ];
 
 let current = [];
+//TO DO//
+const interval = 0;
+const score = 0;
+const life = 3;
 
 const keys = Array.from(document.querySelectorAll(".key"));
 keys.forEach(key => key.addEventListener("transitionend", removeTransition));
@@ -37,11 +41,12 @@ function lunchLetter() {
   setInterval(function() {
     let index = Math.floor(Math.random() * Math.floor(letters.length));
     const box = (div = document.createElement("div"));
-    let width = document.getElementById("canvas").offsetWidth;
-    let height = document.getElementById("canvas").offsetHeight;
+    const canvas = document.getElementById("canvas");
+    let width = canvas.offsetWidth;
+    let height = canvas.offsetHeight;
     let currentId = 0;
 
-    document.body.appendChild(box);
+    canvas.appendChild(box);
     box.classList.add("box");
     addIdToBox(box);
     currentId = box.id;
