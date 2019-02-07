@@ -79,10 +79,6 @@ function destroyBox(idToDestroy) {
   }
 }
 
-function removeStartBtn() {
-  start.remove();
-}
-
 function checkKey(key) {
   console.log(key);
   let pressedKey = key.getAttribute("data-key");
@@ -100,7 +96,7 @@ function checkKey(key) {
 const start = document.querySelector("#start");
 start.addEventListener("click", () => {
   lunchLetter();
-  removeStartBtn();
+  start.remove();
 });
 
 function removeTransition(e) {
